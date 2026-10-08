@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sakura Lista — Lembaga Pelatihan Khusus Bahasa Jepang | Gempol, Pasuruan</title>
+<meta name="description" content="Sakura Lista membimbing anak muda Indonesia belajar bahasa Jepang, menguasai budaya kerja Jepang, dan mendampingi sampai berangkat. Gempol, Pasuruan. Konsultasi gratis via WhatsApp.">
+<meta name="theme-color" content="#101a33">
+<link rel="icon" href="assets/img/logo-sakura-lista.webp">
+<link rel="canonical" href="https://sakuralista.example/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sakura Lista — Lembaga Pelatihan Khusus Bahasa Jepang">
+<meta property="og:description" content="Dari ruang kelas di Gempol sampai gerbang keberangkatan. Kami dampingi sampai kamu benar-benar berangkat.">
+<meta property="og:image" content="assets/img/hero/h4-bandara.webp">
+<meta property="og:locale" content="id_ID">
+
+<!-- Hanya wajah font yang benar-benar muncul sebelum cat pertama -->
+<link rel="preload" href="assets/fonts/BebasNeue.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/Archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/img/hero/h1-japan-street.webp" as="image" fetchpriority="high">
+<link rel="stylesheet" href="assets/site.css">
+
+<script>
+  /* Gerbang motion dipasang di <head> supaya tidak ada satu pun elemen reveal
+     yang tersembunyi permanen bagi pengguna reduced-motion atau tanpa JS. */
+  try {
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('motion-ok');
+    }
+  } catch (e) {}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Sakura Lista",
+  "alternateName": "LPK Sakura Lista",
+  "description": "Lembaga Pelatihan Khusus Bahasa Jepang dan pengiriman tenaga kerja ke Jepang.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Gempol",
+    "addressLocality": "Pasuruan",
+    "addressRegion": "Jawa Timur",
+    "addressCountry": "ID"
+  },
+  "telephone": "+6289639637779",
+  "areaServed": "Indonesia"
+}
+</script>
+</head>
+
+<body>
+
+<a class="skip" href="#program">Lompat ke program</a>
+
+<!-- SPLASH ================================================================ -->
+<div id="splash" aria-hidden="true">
+  <div class="splash-in">
+    <div class="splash-kanji">桜</div>
+    <div class="splash-nama">Sakura Lista</div>
+    <div class="splash-sub">Lembaga Pelatihan Khusus Bahasa Jepang</div>
+  </div>
+</div>
+
+<div id="progress" aria-hidden="true"></div>
+
+<!-- HEADER ================================================================ -->
+<header id="hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="#top" aria-label="Sakura Lista — ke atas">
+      <img src="assets/img/logo-sakura-lista.webp" alt="Logo Sakura Lista" width="83" height="104">
+      <span class="brand-tx">
+        <strong>Sakura <em>Lista</em></strong>
+        <span>Bahasa Jepang · Gempol</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Navigasi utama">
+      <a href="#tentang">Tentang</a>
+      <a href="#program">Program</a>
+      <a href="#alumni">Alumni</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#kaiwa">Jago Kaiwa</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <div class="hdr-cta">
+      <a class="btn btn-solid btn-kecil"
+         href="https://wa.me/6289639637779?text=Halo%20Sakura%20Lista%2C%20saya%20ingin%20konsultasi%20gratis%20soal%20program%20kerja%20ke%20Jepang."
+         target="_blank" rel="noopener">
+        Konsultasi Gratis
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false" aria-controls="drawer">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div id="scrim" hidden></div>
+
+<!-- DRAWER ================================================================ -->
+<aside id="drawer" aria-label="Menu" aria-hidden="true">
+  <div class="drawer-top">
+    <span class="no-sec">MENU</span>
+    <button class="x" id="drawerX" aria-label="Tutup menu">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <nav aria-label="Navigasi menu">
+    <a href="#tentang"><i>01</i> Tentang</a>
+    <a href="#program"><i>02</i> Program</a>
+    <a href="#alur"><i>03</i> Alur</a>
+    <a href="#alumni"><i>04</i> Alumni</a>
+    <a href="#galeri"><i>05</i> Galeri</a>
+    <a href="#kaiwa"><i>06</i> Jago Kaiwa</a>
+    <a href="#testimoni"><i>07</i> Testimoni</a>
+    <a href="#faq"><i>08</i> FAQ</a>
+  </nav>
+  <div class="drawer-bawah">
+    <a class="btn btn-wa" href="https://wa.me/6289639637779?text=Halo%20Sakura%20Lista%2C%20saya%20ingin%20konsultasi%20gratis." target="_blank" rel="noopener">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.1-.3 0-.4.1-.6.1-.1.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 1.5 2.4 3.7 3.4 1.9.8 2.4.8 3.1.7.5-.1 1.1-.5 1.3-1 .2-.5.2-.9.1-1-.1-.1-.2-.2-.4-.3Z"/><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>
+      WhatsApp Sekarang
+    </a>
+    <p class="kecil" style="font-family:var(--mono);font-size:.63rem;letter-spacing:.1em;text-transform:uppercase">Gempol, Pasuruan · Sen–Sab 08.00–16.00</p>
+  </div>
+</aside>
+
+<!-- HERO ================================================================== -->
+<main id="top">
+<section class="hero" aria-label="Pembuka">
+
+  <div class="hero-foto" id="heroFoto" aria-hidden="true">
+    <!-- TODO: ganti foto asli -->
+    <figure class="on"><img src="assets/img/hero/h1-japan-street.webp" alt="" fetchpriority="high" width="1600" height="1000"></figure>
+    <figure><img data-src="assets/img/hero/h4-bandara.webp" alt="" loading="lazy" decoding="async" width="1600" height="1000"></figure>
+    <figure><img data-src="assets/img/hero/h3-kelas.webp" alt="" loading="lazy" decoding="async" width="1200" height="525"></figure>
+    <figure><img data-src="assets/img/hero/h2-sakura-fuji.webp" alt="" loading="lazy" decoding="async" width="1600" height="1000"></figure>
+    <figure><img data-src="assets/img/hero/h5-torii.webp" alt="" loading="lazy" decoding="async" width="1700" height="1007"></figure>
+  </div>
+
+  <div class="hero-tirai" aria-hidden="true"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-kanji" aria-hidden="true">桜花</div>
+
+  <div class="hero-in">
+    <div class="wrap hero-atas">
+
+      <div>
+        <div class="hero-chips">
+          <span class="chip chip-merah">Resmi &amp; Berizin</span>
+          <span class="chip">Gempol, Pasuruan</span>
+          <span class="chip jp">日本語教育</span>
+        </div>
+
+        <h1 class="mega pecah" data-pecah>Berangkat ke Jepang, <em class="aksen">dengan bekal yang benar.</em></h1>
+
+        <p class="lead">Bukan sekadar kursus bahasa. Di Sakura Lista kamu dilatih bicara, dibiasakan dengan budaya kerja Jepang, dan didampingi satu per satu sampai berdiri di gerbang keberangkatan.</p>
+
+        <div class="hero-tombol">
+          <a class="btn btn-solid" href="https://wa.me/6289639637779?text=Halo%20Sakura%20Lista%2C%20saya%20ingin%20mendaftar%20program%20kerja%20ke%20Jepang." target="_blank" rel="noopener">
+            Daftar Sekarang
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#program">Lihat Program</a>
+        </div>
+      </div>
+
+      <div class="hero-dok" id="dok">
+        <div class="hero-dok-bingkai">
+          <!-- TODO: ganti foto asli -->
+          <figure class="on"><img src="assets/img/kelas-bahasa.webp" alt="Suasana kelas bahasa Jepang di Sakura Lista" loading="lazy" width="1000" height="667"></figure>
+          <figure><img data-src="assets/img/hero-ojigi.webp" alt="Latihan ojigi dan etika kerja Jepang" loading="lazy" decoding="async" width="1000" height="347"></figure>
+          <figure><img data-src="assets/img/hero-apel.webp" alt="Apel pagi peserta pelatihan" loading="lazy" decoding="async" width="1000" height="368"></figure>
+          <figure><img data-src="assets/img/hero-konseling.webp" alt="Sesi konseling dan bimbingan mensetsu" loading="lazy" decoding="async" width="1000" height="432"></figure>
+          <figure><img data-src="assets/img/ujian.webp" alt="Ujian kemampuan bahasa Jepang peserta" loading="lazy" decoding="async" width="1000" height="570"></figure>
+          <figure><img data-src="assets/img/seragam.webp" alt="Peserta dengan seragam pelatihan" loading="lazy" decoding="async" width="1000" height="656"></figure>
+          <figure><img data-src="assets/img/bandara.webp" alt="Keberangkatan peserta di bandara" loading="lazy" decoding="async" width="1100" height="677"></figure>
+        </div>
+        <div class="hero-dok-bar">
+          <span class="hero-dok-no" id="dokNo">01 / 07</span>
+          <p class="hero-dok-cap" id="dokCap" aria-live="polite">Kelas bahasa Jepang — latihan kaiwa setiap hari</p>
+          <button class="nav-bulat" id="dokPrev" aria-label="Dokumentasi sebelumnya">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="nav-bulat" id="dokNext" aria-label="Dokumentasi berikutnya">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero-bawah">
+      <div class="hero-dots" id="heroDots" role="tablist" aria-label="Pilih latar pembuka">
+        <button role="tab" aria-selected="true" aria-label="Latar 1"></button>
+        <button role="tab" aria-selected="false" aria-label="Latar 2"></button>
+        <button role="tab" aria-selected="false" aria-label="Latar 3"></button>
+        <button role="tab" aria-selected="false" aria-label="Latar 4"></button>
+        <button role="tab" aria-selected="false" aria-label="Latar 5"></button>
+      </div>
+      <div class="wrap">
+        <div class="hero-stat">
+          <!-- TODO: ganti angka asli -->
+          <div><b data-angka="320" data-suffix="+">0</b><span>Alumni Berangkat</span></div>
+          <div><b data-angka="92" data-suffix="%">0</b><span>Lolos Mensetsu</span></div>
+          <div><b data-angka="2016" data-plain="1">0</b><span>Berdiri Sejak</span></div>
+          <div><b data-angka="45" data-suffix="+">0</b><span>Mitra di Jepang</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RIBBON ================================================================ -->
+<div class="ribbon" aria-hidden="true">
+  <div class="ribbon-track">
+    <div>
+      <span>Pertanian · 農業</span><span>Perawatan Mesin · 機械保全</span><span>Manufaktur · 製造業</span><span>Pengolahan Makanan · 食品加工</span><span>Kaigo · 介護</span><span>Konstruksi · 建設</span><span>Perhotelan · 宿泊</span><span>Pengelasan · 溶接</span>
+    </div>
+    <div>
+      <span>Pertanian · 農業</span><span>Perawatan Mesin · 機械保全</span><span>Manufaktur · 製造業</span><span>Pengolahan Makanan · 食品加工</span><span>Kaigo · 介護</span><span>Konstruksi · 建設</span><span>Perhotelan · 宿泊</span><span>Pengelasan · 溶接</span>
+    </div>
+  </div>
+</div>
+
+<!-- GARANSI =============================================================== -->
+<section class="sec" style="padding-top:clamp(2.6rem,5vw,4rem)">
+  <div class="wrap">
+    <div class="garansi rv">
+      <div>
+        <div class="ikon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3 4 6v6c0 4.4 3.4 8.3 8 9 4.6-.7 8-4.6 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3 class="h3">Resmi &amp; terdaftar</h3>
+        <p class="kecil">Lembaga berizin dengan proses yang bisa ditelusuri. Tidak ada jalur gelap, tidak ada janji instan.</p>
+      </div>
+      <div>
+        <div class="ikon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></div>
+        <h3 class="h3">Didampingi, bukan dilepas</h3>
+        <p class="kecil">Satu pembimbing memantau progres bahasamu, latihan mensetsu, sampai pengurusan dokumen keberangkatan.</p>
+      </div>
+      <div>
+        <div class="ikon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg></div>
+        <h3 class="h3">Biaya dibicarakan terbuka</h3>
+        <p class="kecil">Rincian komponen biaya dijelaskan di awal, sebelum kamu memutuskan apa pun. Tanyakan langsung via WhatsApp.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TENTANG =============================================================== -->
+<section class="sec sec-soft" id="tentang">
+  <div class="wrap">
+    <div class="tentang">
+
+      <div class="rv">
+        <div class="tentang-foto">
+          <!-- TODO: ganti foto asli -->
+          <img src="assets/img/kelas-belajar.webp" alt="Peserta Sakura Lista belajar bahasa Jepang di kelas" loading="lazy" width="1000" height="730">
+          <div class="stempel">
+            <b>桜花道</b>
+            <span>Jalan kelopak sakura</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="kepala rv">
+          <span class="eyebrow">01 — Tentang Kami</span>
+          <h2 class="h1">Jalan ke Jepang itu panjang. Kami temani dari langkah pertama.</h2>
+          <p class="lead">Sakura Lista berdiri untuk satu hal sederhana: memastikan anak muda Indonesia tidak berangkat ke Jepang dengan bekal setengah‑setengah. Bahasanya dilatih sampai bisa dipakai bicara, bukan hanya dihafal untuk ujian. Budaya kerjanya dibiasakan sejak di kelas, supaya hari pertama di Jepang bukan kejutan.</p>
+        </div>
+
+        <ul class="unggul">
+          <li class="rv" style="--d:40ms">
+            <i>あ</i>
+            <div>
+              <b>Kurikulum bahasa bertingkat</b>
+              <p class="kecil">Dari hiragana sampai kaiwa percaya diri. Kelas kecil, latihan bicara setiap hari, evaluasi berkala.</p>
+            </div>
+          </li>
+          <li class="rv" style="--d:100ms">
+            <i>礼</i>
+            <div>
+              <b>Pelatihan budaya kerja Jepang</b>
+              <p class="kecil">Ojigi, disiplin waktu, komunikasi dengan atasan, kebiasaan rapi — dilatih sampai jadi refleks.</p>
+            </div>
+          </li>
+          <li class="rv" style="--d:160ms">
+            <i>面</i>
+            <div>
+              <b>Simulasi mensetsu berulang</b>
+              <p class="kecil">Wawancara kerja dilatih berkali-kali dengan skenario nyata dari mitra perusahaan di Jepang.</p>
+            </div>
+          </li>
+          <li class="rv" style="--d:220ms">
+            <i>旅</i>
+            <div>
+              <b>Pendampingan sampai berangkat</b>
+              <p class="kecil">Dokumen, paspor, visa, medical check‑up, sampai pengantaran di bandara. Kamu tidak mengurus sendiri.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM =============================================================== -->
+<section class="sec" id="program">
+  <div class="wrap">
+    <div class="kepala rv">
+      <span class="eyebrow">02 — Program &amp; Job</span>
+      <h2 class="h1">Bidang kerja yang kami siapkan</h2>
+      <p class="lead">Setiap bidang punya kosakata, standar keselamatan, dan kebiasaan kerjanya sendiri. Pelatihan disesuaikan dengan job yang kamu tuju, bukan satu kurikulum untuk semua.</p>
+    </div>
+
+    <div class="grid-prog">
+      <!-- TODO: ganti foto asli -->
+      <a class="kartu-prog rv" style="--d:0ms" href="https://wa.me/6289639637779?text=Halo%2C%20saya%20ingin%20tanya%20job%20Pertanian." target="_blank" rel="noopener">
+        <div class="kartu-prog-foto"><img src="assets/img/tg-pertanian.webp" alt="Job pertanian di Jepang" loading="lazy" width="560" height="420"></div>
+        <div class="kartu-prog-tx"><span class="jpkecil">農業</span><b>Pertanian</b><p>Budidaya sayur, rumah kaca, panen musiman. Banyak penempatan di Kyushu dan Hokkaido.</p></div>
+      </a>
+
+      <a class="kartu-prog rv" style="--d:60ms" href="https://wa.me/6289639637779?text=Halo%2C%20saya%20ingin%20tanya%20job%20Perawatan%20Mesin." target="_blank" rel="noopener">
+        <div class="kartu-prog-foto"><img src="assets/img/prog-alat-berat.webp" alt="Job perawatan mesin di Jepang" loading="lazy" width="560" height="420"></div>
+        <div class="kartu-prog-tx"><span class="jpkecil">機械保全</span><b>Perawatan Mesin</b><p>Pemeliharaan dan inspeksi mesin produksi. Butuh ketelitian dan disiplin laporan.</p></div>
+      </a>
+
+      <a class="kartu-prog rv" style="--d:120ms" href="https://wa.me/6289639637779?text=Halo%2C%20saya%20ingin%20tanya%20job%20Manufaktur." target="_blank" rel="noopener">
+        <div class="kartu-prog-foto"><img src="assets/img/prog-pengelasan.webp" alt="Job manufaktur dan pengelasan di Jepang" loading="lazy" width="560" height="315"></div>
+        <div class="kartu-prog-tx"><span class="jpkecil">製造業</span><b>Manufaktur</b><p>Perakitan, pengelasan, kontrol kualitas di lini produksi pabrik Jepang.</p></div>
+      </a>
+
+      <a class="kartu-prog rv" style="--d:180ms" href="https://wa.me/6289639637779?text=Halo%2C%20saya%20ingin%20tanya%20job%20Pengolahan%20Makanan." target="_blank" rel="noopener">
+        <div class="kartu-prog-foto"><img src="assets/img/tg-makanan.webp" alt="Job pengolahan makanan di Jepang" loading="lazy" width="560" height="784"></div>
+        <div class="kartu-prog-tx"><span class="jpkecil">食品加工</span><b>Pengolahan Makanan</b><p>Produksi bento, pengemasan, higienitas pangan. Standar kebersihan sangat ketat.</p></div>
+      </a>
+
+      <a class="kartu-prog rv" style="--d:240ms" href="https://wa.me/6289639637779?text=Halo%2C%20saya%20ingin%20tanya%20job%20Kaigo." target="_blank" rel="noopener">
+        <div class="kartu-prog-foto"><img src="assets/img/prog-kaigo.webp" alt="Job kaigo perawatan lansia di Jepang" loading="lazy" width="560" height="562"></div>
+        <div class="kartu-prog-tx"><span class="jpkecil">介護</span><b>Kaigo</b><p>Perawatan lansia. Bahasa jadi kunci utama — kelas kaiwa untuk kaigo dilatih khusus.</p></div>
+      </a>
+
+      <a class="kartu-prog rv" style="--d:300ms" href="https://wa.me/6289639637779?text=Halo%2C%20saya%20ingin%20tanya%20job%20Konstruksi." target="_blank" rel="noopener">
+        <div class="kartu-prog-foto"><img src="assets/img/prog-konstruksi.webp" alt="Job konstruksi di Jepang" loading="lazy" width="560" height="560"></div>
+        <div class="kartu-prog-tx"><span class="jpkecil">建設</span><b>Konstruksi</b><p>Pekerjaan sipil, scaffolding, finishing. Keselamatan kerja dilatih sebelum berangkat.</p></div>
+      </a>
+
+      <a class="kartu-prog rv" style="--d:360ms" href="https://wa.me/6289639637779?text=Halo%2C%20saya%20ingin%20tanya%20job%20Perhotelan." target="_blank" rel="noopener">
+        <div class="kartu-prog-foto"><img src="assets/img/tg-hotel.webp" alt="Job perhotelan di Jepang" loading="lazy" width="560" height="420"></div>
+        <div class="kartu-prog-tx"><span class="jpkecil">宿泊</span><b>Perhotelan</b><p>Front office, housekeeping, ryokan. Keigo dan pelayanan ala Jepang jadi fokus.</p></div>
+      </a>
+
+      <a class="kartu-prog rv" style="--d:420ms" href="https://wa.me/6289639637779?text=Halo%2C%20saya%20ingin%20tanya%20job%20Peternakan." target="_blank" rel="noopener">
+        <div class="kartu-prog-foto"><img src="assets/img/tg-peternakan.webp" alt="Job peternakan di Jepang" loading="lazy" width="560" height="363"></div>
+        <div class="kartu-prog-tx"><span class="jpkecil">畜産</span><b>Peternakan</b><p>Sapi perah, ayam, pengelolaan kandang. Jam kerja teratur, banyak di daerah.</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ALUR ================================================================== -->
+<section class="sec sec-alt" id="alur">
+  <div class="wrap">
+    <div class="kepala rv">
+      <span class="eyebrow terang">03 — Alur Proses</span>
+      <h2 class="h1">Empat tahap, satu tujuan</h2>
+      <p class="lead">Tidak ada tahap yang dilompati. Setiap peserta melewati urutan yang sama, dan progresnya dipantau satu per satu.</p>
+    </div>
+
+    <ol class="alur">
+      <li class="rv" style="--d:0ms">
+        <div class="lingkar" aria-hidden="true"></div>
+        <b>Daftar</b>
+        <p>Konsultasi gratis, tes dasar, dan penentuan job yang paling cocok dengan latar belakangmu.</p>
+      </li>
+      <li class="rv" style="--d:90ms">
+        <div class="lingkar" aria-hidden="true"></div>
+        <b>Pelatihan Bahasa</b>
+        <p>Kelas intensif hiragana sampai kaiwa, ditambah pembiasaan budaya dan disiplin kerja Jepang.</p>
+      </li>
+      <li class="rv" style="--d:180ms">
+        <div class="lingkar" aria-hidden="true"></div>
+        <b>Mensetsu</b>
+        <p>Simulasi berulang, lalu wawancara dengan perusahaan Jepang. Dibimbing sampai hari H.</p>
+      </li>
+      <li class="rv" style="--d:270ms">
+        <div class="lingkar" aria-hidden="true"></div>
+        <b>Keberangkatan</b>
+        <p>Dokumen, visa, medical check‑up, pembekalan akhir, sampai pengantaran di bandara.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ALUMNI ================================================================ -->
+<section class="sec" id="alumni">
+  <div class="wrap">
+    <div class="kepala rv">
+      <span class="eyebrow">04 — Alumni</span>
+      <h2 class="h1">Mereka sudah di sana <span class="jp" style="color:var(--hinomaru);font-size:.6em">おめでとう！！</span></h2>
+      <p class="lead">Nama-nama yang dulu duduk di kelas Gempol, sekarang bekerja di Jepang. Setiap satu dari mereka pernah merasa bahasanya belum cukup.</p>
+    </div>
+
+    <div class="alum-wrap rv">
+      <div class="alum-rel">
+        <div class="alum-track" id="alumTrack">
+          <article class="alum-kartu">
+            <div class="alum-atas">
+              <span class="alum-lolos">Lolos Mensetsu</span>
+              <span class="alum-no">01</span>
+            </div>
+            <div class="alum-kanji jp" aria-hidden="true">農業</div>
+            <div class="alum-tx">
+              <span class="alum-av" aria-hidden="true">D</span>
+              <b>Dinda Novarita</b>
+              <div class="alum-meta">
+                <span>農業 Pertanian</span>
+                <span>Kagoshima · prefektur 鹿児島</span>
+              </div>
+              <p class="alum-omede jp">おめでとう！！</p>
+            </div>
+          </article>
+          <article class="alum-kartu">
+            <div class="alum-atas">
+              <span class="alum-lolos">Lolos Mensetsu</span>
+              <span class="alum-no">02</span>
+            </div>
+            <div class="alum-kanji jp" aria-hidden="true">機械保全</div>
+            <div class="alum-tx">
+              <span class="alum-av" aria-hidden="true">B</span>
+              <b>M. Bintang Yuda S.</b>
+              <div class="alum-meta">
+                <span>機械保全 Perawatan Mesin</span>
+                <span>Kagoshima · prefektur 鹿児島</span>
+              </div>
+              <p class="alum-omede jp">おめでとう！！</p>
+            </div>
+          </article>
+          <article class="alum-kartu">
+            <div class="alum-atas">
+              <span class="alum-lolos">Lolos Mensetsu</span>
+              <span class="alum-no">03</span>
+            </div>
+            <div class="alum-kanji jp" aria-hidden="true">介護</div>
+            <div class="alum-tx">
+              <span class="alum-av" aria-hidden="true">A</span>
+              <b>Nur Azizah</b>
+              <div class="alum-meta">
+                <span>介護 Kaigo</span>
+                <span>Mie · prefektur 三重</span>
+              </div>
+              <p class="alum-omede jp">おめでとう！！</p>
+            </div>
+          </article>
+          <article class="alum-kartu">
+            <div class="alum-atas">
+              <span class="alum-lolos">Lolos Mensetsu</span>
+              <span class="alum-no">04</span>
+            </div>
+            <div class="alum-kanji jp" aria-hidden="true">食品加工</div>
+            <div class="alum-tx">
+              <span class="alum-av" aria-hidden="true">R</span>
+              <b>Rizky Pratama</b>
+              <div class="alum-meta">
+                <span>食品加工 Pengolahan Makanan</span>
+                <span>Aichi · prefektur 愛知</span>
+              </div>
+              <p class="alum-omede jp">おめでとう！！</p>
+            </div>
+          </article>
+          <article class="alum-kartu">
+            <div class="alum-atas">
+              <span class="alum-lolos">Lolos Mensetsu</span>
+              <span class="alum-no">05</span>
+            </div>
+            <div class="alum-kanji jp" aria-hidden="true">農業</div>
+            <div class="alum-tx">
+              <span class="alum-av" aria-hidden="true">S</span>
+              <b>Siti Maulidya</b>
+              <div class="alum-meta">
+                <span>農業 Pertanian</span>
+                <span>Kumamoto · prefektur 熊本</span>
+              </div>
+              <p class="alum-omede jp">おめでとう！！</p>
+            </div>
+          </article>
+          <article class="alum-kartu">
+            <div class="alum-atas">
+              <span class="alum-lolos">Lolos Mensetsu</span>
+              <span class="alum-no">06</span>
+            </div>
+            <div class="alum-kanji jp" aria-hidden="true">製造業</div>
+            <div class="alum-tx">
+              <span class="alum-av" aria-hidden="true">F</span>
+              <b>Ahmad Fauzan</b>
+              <div class="alum-meta">
+                <span>製造業 Manufaktur</span>
+                <span>Shizuoka · prefektur 静岡</span>
+              </div>
+              <p class="alum-omede jp">おめでとう！！</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="alum-bar">
+        <span class="no-sec" id="alumNo">01 / 06</span>
+        <div class="alum-garis"><i id="alumGaris" style="transform:scaleX(.17)"></i></div>
+        <button class="nav-bulat gelap" id="alumPrev" aria-label="Alumni sebelumnya">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="nav-bulat gelap" id="alumNext" aria-label="Alumni berikutnya">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERI ================================================================ -->
+<section class="sec sec-soft" id="galeri">
+  <div class="wrap">
+    <div class="kepala rv">
+      <span class="eyebrow">05 — Galeri</span>
+      <h2 class="h1">Suasana kelas sampai gerbang bandara</h2>
+      <p class="lead">Dokumentasi kegiatan harian di Gempol dan momen keberangkatan peserta. Klik untuk memperbesar.</p>
+    </div>
+
+    <div class="galeri">
+      <!-- TODO: ganti foto asli -->
+      <button class="gal-item lebar rv" data-lb="assets/img/bandara.webp" data-cap="Keberangkatan angkatan — bandara">
+        <img src="assets/img/bandara.webp" alt="Momen keberangkatan peserta Sakura Lista di bandara" loading="lazy" width="1100" height="677">
+        <span class="gal-cap">Keberangkatan angkatan · いってらっしゃい</span>
+      </button>
+      <button class="gal-item rv" style="--d:60ms" data-lb="assets/img/kelas-bahasa.webp" data-cap="Kelas bahasa Jepang">
+        <img src="assets/img/kelas-bahasa.webp" alt="Kelas bahasa Jepang Sakura Lista" loading="lazy" width="1000" height="667">
+        <span class="gal-cap">Kelas bahasa</span>
+      </button>
+      <button class="gal-item rv" style="--d:100ms" data-lb="assets/img/hero-ojigi.webp" data-cap="Latihan ojigi dan etika kerja">
+        <img src="assets/img/hero-ojigi.webp" alt="Latihan ojigi peserta Sakura Lista" loading="lazy" width="1000" height="347">
+        <span class="gal-cap">Etika ojigi</span>
+      </button>
+      <button class="gal-item rv" style="--d:140ms" data-lb="assets/img/hero-apel.webp" data-cap="Apel pagi">
+        <img src="assets/img/hero-apel.webp" alt="Apel pagi peserta pelatihan" loading="lazy" width="1000" height="368">
+        <span class="gal-cap">Apel pagi</span>
+      </button>
+      <button class="gal-item rv" style="--d:180ms" data-lb="assets/img/kelas-belajar.webp" data-cap="Belajar mandiri">
+        <img src="assets/img/kelas-belajar.webp" alt="Peserta belajar mandiri" loading="lazy" width="1000" height="730">
+        <span class="gal-cap">Belajar mandiri</span>
+      </button>
+      <button class="gal-item rv" style="--d:220ms" data-lb="assets/img/ujian.webp" data-cap="Ujian kemampuan bahasa">
+        <img src="assets/img/ujian.webp" alt="Ujian kemampuan bahasa Jepang" loading="lazy" width="1000" height="570">
+        <span class="gal-cap">Ujian bahasa</span>
+      </button>
+      <button class="gal-item rv" style="--d:260ms" data-lb="assets/img/hero-konseling.webp" data-cap="Bimbingan mensetsu">
+        <img src="assets/img/hero-konseling.webp" alt="Sesi bimbingan mensetsu" loading="lazy" width="1000" height="432">
+        <span class="gal-cap">Bimbingan mensetsu</span>
+      </button>
+      <button class="gal-item rv" style="--d:300ms" data-lb="assets/img/asrama.webp" data-cap="Asrama peserta">
+        <img src="assets/img/asrama.webp" alt="Asrama peserta pelatihan" loading="lazy" width="900" height="675">
+        <span class="gal-cap">Asrama</span>
+      </button>
+      <button class="gal-item lebar rv" style="--d:340ms" data-lb="assets/img/bandara.webp" data-cap="Gerbang keberangkatan">
+        <img src="assets/img/bandara.webp" alt="Gerbang keberangkatan bandara menjelang penerbangan ke Jepang" loading="lazy" width="1100" height="677">
+        <span class="gal-cap">Gerbang keberangkatan · 向こうでも気をつけて</span>
+      </button>
+      <button class="gal-item rv" style="--d:380ms" data-lb="assets/img/dokumen-paspor.webp" data-cap="Pengurusan dokumen dan paspor">
+        <img src="assets/img/dokumen-paspor.webp" alt="Pengurusan dokumen dan paspor peserta" loading="lazy" width="900" height="1244">
+        <span class="gal-cap">Dokumen &amp; paspor</span>
+      </button>
+      <button class="gal-item rv" style="--d:420ms" data-lb="assets/img/mcu-medis.webp" data-cap="Medical check‑up">
+        <img src="assets/img/mcu-medis.webp" alt="Medical check‑up peserta" loading="lazy" width="900" height="1350">
+        <span class="gal-cap">Medical check‑up</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- KAIWA ================================================================= -->
+<section class="sec" id="kaiwa">
+  <div class="wrap">
+    <div class="kepala rv">
+      <span class="eyebrow">06 — Jago Kaiwa</span>
+      <h2 class="h1">Satu kata sehari, dipakai bicara</h2>
+      <p class="lead">Materi harian yang dibagikan di kelas dan Instagram kami. Bukan hafalan — langsung dipakai dalam kalimat yang kepakai di tempat kerja.</p>
+    </div>
+
+    <div class="kaiwa-grid">
+      <article class="kaiwa rv" style="--d:0ms">
+        <div class="kana jp">まさか</div>
+        <div class="romaji">masaka</div>
+        <div class="arti">Masa? / Tidak mungkin!</div>
+        <p class="contoh"><span class="jp">まさか、本当ですか。</span>Masa, benar begitu?</p>
+      </article>
+
+      <article class="kaiwa rv" style="--d:60ms">
+        <div class="kana jp">お疲れ様</div>
+        <div class="romaji">otsukaresama</div>
+        <div class="arti">Terima kasih atas kerja kerasmu</div>
+        <p class="contoh"><span class="jp">お疲れ様でした。</span>Diucapkan saat selesai kerja — wajib tiap hari di Jepang.</p>
+      </article>
+
+      <article class="kaiwa rv" style="--d:120ms">
+        <div class="kana jp">頑張って</div>
+        <div class="romaji">ganbatte</div>
+        <div class="arti">Semangat! / Berusahalah</div>
+        <p class="contoh"><span class="jp">向こうでも頑張ってね。</span>Semangat juga di sana, ya.</p>
+      </article>
+
+      <article class="kaiwa rv" style="--d:180ms">
+        <div class="kana jp">承知</div>
+        <div class="romaji">shouchi</div>
+        <div class="arti">Dimengerti (sopan ke atasan)</div>
+        <p class="contoh"><span class="jp">承知しました。</span>Baik, saya mengerti — jauh lebih sopan daripada 「わかった」</p>
+      </article>
+
+      <article class="kaiwa rv" style="--d:240ms">
+        <div class="kana jp">気をつけて</div>
+        <div class="romaji">ki o tsukete</div>
+        <div class="arti">Hati-hati ya</div>
+        <p class="contoh"><span class="jp">行ってらっしゃい、気をつけて。</span>Selamat jalan, hati-hati.</p>
+      </article>
+
+      <article class="kaiwa rv" style="--d:300ms">
+        <div class="kana jp">面接</div>
+        <div class="romaji">mensetsu</div>
+        <div class="arti">Wawancara kerja</div>
+        <p class="contoh"><span class="jp">明日は面接です。</span>Besok ada wawancara — tahap penentu sebelum berangkat.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONI ============================================================= -->
+<section class="sec sec-alt" id="testimoni">
+  <div class="wrap">
+    <div class="kepala rv">
+      <span class="eyebrow terang">07 — Testimoni</span>
+      <h2 class="h1">Yang dirasakan alumni dan orang tua</h2>
+    </div>
+
+    <div class="testi-grid">
+      <!-- TODO: ganti kutipan asli dari alumni -->
+      <figure class="testi rv" style="--d:0ms">
+        <blockquote>Awalnya saya cuma bisa aisatsu. Tiga bulan latihan kaiwa tiap hari, waktu mensetsu saya bisa jawab tanpa gemetar. Sekarang saya kerja di rumah kaca di Kagoshima.</blockquote>
+        <figcaption><span class="testi-av" aria-hidden="true">D</span><span><b>Dinda N.</b><span>Alumni · Pertanian, Kagoshima</span></span></figcaption>
+      </figure>
+
+      <figure class="testi rv" style="--d:70ms">
+        <blockquote>Sebagai orang tua yang paling saya takutkan itu anak dilepas sendiri. Di sini tiap tahap dikabari, dokumen diurus bareng, sampai hari keberangkatan kami diantar ke bandara.</blockquote>
+        <figcaption><span class="testi-av" aria-hidden="true">S</span><span><b>Ibu Sulastri</b><span>Orang tua peserta · Gempol</span></span></figcaption>
+      </figure>
+
+      <figure class="testi rv" style="--d:140ms">
+        <blockquote>Yang paling kepakai justru pelatihan budayanya. Ojigi, laporan ke atasan, disiplin waktu — di hari pertama kerja saya tidak kaget karena sudah dibiasakan di kelas.</blockquote>
+        <figcaption><span class="testi-av" aria-hidden="true">B</span><span><b>Bintang Y.</b><span>Alumni · Perawatan Mesin, Kagoshima</span></span></figcaption>
+      </figure>
+
+      <figure class="testi rv" style="--d:210ms">
+        <blockquote>Saya tiga kali gagal simulasi mensetsu dan tetap dibimbing ulang, tidak ditinggal. Keempat kalinya lolos. Itu yang bikin saya percaya tempat ini serius.</blockquote>
+        <figcaption><span class="testi-av" aria-hidden="true">A</span><span><b>Nur Azizah</b><span>Alumni · Kaigo, Mie</span></span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ =================================================================== -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="kepala rv" style="margin-left:auto;margin-right:auto;text-align:center">
+      <span class="eyebrow" style="justify-content:center">08 — FAQ</span>
+      <h2 class="h1">Pertanyaan yang paling sering masuk</h2>
+    </div>
+
+    <div class="faq rv">
+      <details>
+        <summary>Berapa total biayanya? <span class="plus" aria-hidden="true"></span></summary>
+        <div class="isi"><div>Komponen biaya terdiri dari pendaftaran, pelatihan bahasa, pengurusan dokumen, medical check‑up, dan pembekalan. Besarannya berbeda tergantung job dan jalur penempatan, jadi <strong>kami jelaskan rinciannya satu per satu saat konsultasi</strong> — bukan angka sepihak di website. Hubungi WhatsApp untuk rincian terbaru.</div></div>
+      </details>
+
+      <details>
+        <summary>Apa saja syarat untuk ikut? <span class="plus" aria-hidden="true"></span></summary>
+        <div class="isi"><div>Secara umum: sehat secara fisik, bersedia mengikuti pelatihan penuh, dan punya dokumen kependudukan yang lengkap. Batas usia dan syarat pendidikan <strong>berbeda per job dan per perusahaan penerima</strong>, dan ketentuannya berubah mengikuti kebijakan terbaru. Tanyakan langsung agar kami cocokkan dengan kondisimu.</div></div>
+      </details>
+
+      <details>
+        <summary>Berapa lama pelatihan sampai berangkat? <span class="plus" aria-hidden="true"></span></summary>
+        <div class="isi"><div>Bergantung pada kecepatan penguasaan bahasa dan jadwal mensetsu dari perusahaan mitra. Peserta yang rajin biasanya lebih cepat sampai tahap wawancara. Kami <strong>tidak menjanjikan tanggal keberangkatan di awal</strong> — yang kami pastikan adalah progresmu dipantau setiap tahap.</div></div>
+      </details>
+
+      <details>
+        <summary>Berapa kisaran gajinya di Jepang? <span class="plus" aria-hidden="true"></span></summary>
+        <div class="isi"><div>Gaji ditentukan oleh perusahaan penerima dan mengikuti upah minimum prefektur masing-masing, jadi berbeda antar daerah dan antar job. Kami sampaikan <strong>angka riil dari kontrak perusahaan yang sedang membuka lowongan</strong> saat konsultasi, bukan perkiraan.</div></div>
+      </details>
+
+      <details>
+        <summary>Harus bisa bahasa Jepang dulu sebelum mendaftar? <span class="plus" aria-hidden="true"></span></summary>
+        <div class="isi"><div>Tidak. Banyak peserta kami mulai dari nol — belum mengenal hiragana sama sekali. Kelas dimulai dari dasar, dan justru itu bagian dari pelatihannya.</div></div>
+      </details>
+
+      <details>
+        <summary>Apakah ada asrama? <span class="plus" aria-hidden="true"></span></summary>
+        <div class="isi"><div>Ada fasilitas tempat tinggal untuk peserta dari luar daerah. Ketersediaan kamar terbatas dan bergantung angkatan, jadi sebaiknya ditanyakan saat mendaftar.</div></div>
+      </details>
+
+      <details>
+        <summary>Kalau gagal mensetsu, bagaimana? <span class="plus" aria-hidden="true"></span></summary>
+        <div class="isi"><div>Dibimbing ulang. Gagal di satu wawancara bukan akhir — evaluasi dilakukan untuk tahu bagian mana yang perlu diperkuat, lalu kamu disiapkan untuk kesempatan berikutnya.</div></div>
+      </details>
+
+      <details>
+        <summary>Di mana lokasi pelatihannya? <span class="plus" aria-hidden="true"></span></summary>
+        <div class="isi"><div>Di Gempol, Kabupaten Pasuruan, Jawa Timur. Untuk alamat lengkap dan titik lokasi, hubungi WhatsApp kami — <strong>sekalian bisa sekaligus mengatur jadwal kunjungan</strong>.</div></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA PENUTUP =========================================================== -->
+<section class="sec cta-tutup">
+  <div class="cta-bg" aria-hidden="true">
+    <!-- TODO: ganti foto asli -->
+    <img src="assets/img/hero/h2-sakura-fuji.webp" alt="" loading="lazy" width="1600" height="1000">
+  </div>
+  <div class="cta-kanji" aria-hidden="true">道</div>
+  <div class="wrap cta-in">
+    <span class="eyebrow terang rv" style="justify-content:center">Langkah pertama</span>
+    <h2 class="h1 rv" style="--d:60ms;margin-top:1rem">Belum yakin? Tanya dulu. Gratis.</h2>
+    <p class="lead rv" style="--d:120ms">Tidak perlu langsung mendaftar. Ceritakan dulu latar belakangmu, lalu kami bantu lihat job mana yang paling masuk — dan apa yang perlu kamu siapkan.</p>
+    <div class="cta-tombol rv" style="--d:180ms">
+      <a class="btn btn-wa" href="https://wa.me/6289639637779?text=Halo%20Sakura%20Lista%2C%20saya%20ingin%20konsultasi%20gratis%20soal%20program%20kerja%20ke%20Jepang." target="_blank" rel="noopener">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/><path d="M17.5 14.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.1-.3 0-.4.1-.6.1-.1.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 1.5 2.4 3.7 3.4 1.9.8 2.4.8 3.1.7.5-.1 1.1-.5 1.3-1 .2-.5.2-.9.1-1-.1-.1-.2-.2-.4-.3Z"/></svg>
+        Konsultasi via WhatsApp
+      </a>
+      <a class="btn btn-ghost" href="#program">Lihat Program Dulu</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER ================================================================ -->
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="brand" style="margin-bottom:1rem">
+          <img src="assets/img/logo-sakura-lista.webp" alt="" width="83" height="104">
+          <span class="brand-tx">
+            <strong>Sakura <em>Lista</em></strong>
+            <span>Pelatihan Bahasa Jepang</span>
+          </span>
+        </div>
+        <p class="kecil" style="color:rgba(255,253,249,.62);max-width:34ch">Lembaga Pelatihan Khusus Bahasa Jepang di Gempol, Pasuruan. Membimbing dari kelas pertama sampai gerbang keberangkatan.</p>
+      </div>
+
+      <div>
+        <div class="f-judul">Halaman</div>
+        <ul class="f-list">
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#program">Program</a></li>
+          <li><a href="#alur">Alur Proses</a></li>
+          <li><a href="#alumni">Alumni</a></li>
+          <li><a href="#galeri">Galeri</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="f-judul">Bidang Job</div>
+        <ul class="f-list">
+          <li><a href="#program">Pertanian</a></li>
+          <li><a href="#program">Perawatan Mesin</a></li>
+          <li><a href="#program">Manufaktur</a></li>
+          <li><a href="#program">Pengolahan Makanan</a></li>
+          <li><a href="#program">Kaigo</a></li>
+          <li><a href="#program">Konstruksi</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="f-judul">Kontak</div>
+        <ul class="f-kontak">
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Gempol, Kab. Pasuruan<br>Jawa Timur, Indonesia</span>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+            <span><a href="https://wa.me/6289639637779" target="_blank" rel="noopener">0896-3963-7779</a><br>WhatsApp &amp; telepon</span>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+            <span>Senin–Sabtu<br>08.00 – 16.00 WIB</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="f-bawah">
+      <span>© 2026 Sakura Lista · Gempol, Pasuruan</span>
+      <span class="jp" style="letter-spacing:0">桜花道 — 一歩ずつ</span>
+      <span class="kanan">Prototype website</span>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX ============================================================== -->
+<div id="lb" role="dialog" aria-modal="true" aria-label="Pratinjau foto" hidden>
+  <button id="lbx" aria-label="Tutup pratinjau">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+  <div>
+    <img id="lbimg" src="" alt="">
+    <p class="cap" id="lbcap"></p>
+  </div>
+</div>
+
+<!-- FAB =================================================================== -->
+<a id="fab" href="https://wa.me/6289639637779?text=Halo%20Sakura%20Lista%2C%20saya%20ingin%20konsultasi%20gratis." target="_blank" rel="noopener" aria-label="Konsultasi via WhatsApp">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/><path d="M17.5 14.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.1-.3 0-.4.1-.6.1-.1.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 1.5 2.4 3.7 3.4 1.9.8 2.4.8 3.1.7.5-.1 1.1-.5 1.3-1 .2-.5.2-.9.1-1-.1-.1-.2-.2-.4-.3Z"/></svg>
+  <span>Konsultasi Gratis</span>
+</a>
+
+<script src="assets/site.js" defer></script>
+<!-- penanda demo: project ini portofolio, bukan situs resmi klien -->
+<div style="position:fixed;left:0;right:0;bottom:0;z-index:99999;
+  background:#111827;color:#f9fafb;font:500 13px/1.45 system-ui,sans-serif;
+  padding:9px 14px;text-align:center;box-shadow:0 -2px 12px rgba(0,0,0,.25)">
+  Demo portofolio desain web &middot; bukan situs resmi lembaga &middot;
+  dibuat oleh <a href="https://portofolioadji-v3.vercel.app" target="_blank"
+  rel="noopener" style="color:#93c5fd;text-decoration:underline">Adji</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+# file kerja, tidak perlu di repo
+_src/
+_arsip-gambar-tak-terpakai/
+_ai_raw/
+node_modules/
+.vercel
+.DS_Store
+Thumbs.db
+*.zip
+*.psd
+*.ai
